@@ -26,3 +26,7 @@
   background: #ff0000;
   color: white;
   font-size: 8px;
+
+  body {
+    background-color: #000000;
+  }
