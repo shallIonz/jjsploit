@@ -8,7 +8,7 @@ body {
 	background-color: #121518;
 	color: #ffffff;
 	text-align: left;
-	overflow: hidden;
+	overflow: visible;
  	display: flex;
 	flex-direction: column;
 }
