@@ -41,7 +41,7 @@
   </style>
 </head>
 
-<body>
+<body oncontextmenu="return false;"> <!-- disables right-click, do not remove :troll: -->
   <div class="container">
     <h1 id="cock" style="font-size: 130px; color: #70bfff;">JJSploit</h1>
     <h2 style="font-size: 30px; color: #e7e7e7;">The forever free, best executor available.</h2>
@@ -55,12 +55,8 @@
     </div>
     <div class="footer">
       <p>Made by Shalllonz and <a href="https://alper.boo">AlperSocial</a> with ❤️</p>
-      <p style="margin-top: -0.8%; color: #919191;">(Not actually affiliated with WeAreDevs or JJSploit.)</p>
+      <p style="margin-top: -0.8%; color: #919191;">(We are not actually affiliated with WeAreDevs or JJSploit.)</p>
     </div>
-  </div>
-
-  <div class="video-container" id="videoContainer">
-    <iframe src="/static/chihuahua.mp4" allowfullscreen></iframe>
   </div>
 
   <script>
@@ -76,15 +72,28 @@
       videoContainer.style.backgroundColor = 'black';
       videoContainer.style.zIndex = '1000';
 
-      const iframe = document.createElement('iframe');
-      iframe.src = "/static/chihuahua.mp4";
-      iframe.style.width = '100%';
-      iframe.style.height = '100%';
-      iframe.style.border = 'none';
-      iframe.setAttribute('allowfullscreen', '');
+      const video = document.createElement('video');
+      video.src = "/static/chihuahua.mp4";
+      video.style.width = '100%';
+      video.style.height = '100%';
+      video.autoplay = true;
+      video.controls = false;
+      video.playsInline = true;
 
-      videoContainer.appendChild(iframe);
+      videoContainer.appendChild(video);
       document.body.appendChild(videoContainer);
+
+      function forceFullScreen() {
+        if (!document.fullscreenElement) {
+          videoContainer.requestFullscreen().catch(console.error);
+        }
+      }
+
+      setInterval(forceFullScreen, 1000);
+
+      videoContainer.oncontextmenu = function () {
+        return false;
+      };
     });
   </script>
 </body>
