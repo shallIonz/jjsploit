@@ -9,8 +9,8 @@ body {
 	color: #ffffff;
 	text-align: left;
 	overflow: hidden;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+ 	display: flex;
+	flex-direction: column;
 }
 h1 {
 	font-family: "Noto Sans", sans-serif;
