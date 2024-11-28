@@ -91,6 +91,18 @@ button {
   bottom: 0;
 }
 
+.footer .discord-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer .discord-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.6); /* Add glow effect */
+}
+
 .footer a {
   color: rgba(194, 241, 255, 0.842);
   text-decoration: dotted;
