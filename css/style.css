@@ -12,6 +12,29 @@ body {
  	display: flex;
 	flex-direction: column;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #00eeff #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00eeff;
+    border-radius: 0px;
+    border: 0px none #ffffff;
+  }
+
 h1 {
 	font-family: "Noto Sans", sans-serif;
 	font-weight: 500;
