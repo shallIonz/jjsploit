@@ -30,7 +30,7 @@ h2 {
 .gallery {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	gap: 10px;
 	margin: 20px auto;
 }
