@@ -17,11 +17,13 @@
       background-color: #121518;
       color: #ffffff;
       font-family: "Noto Sans", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
     .container {
-      position: relative;
-      top: 30%;
-      transform: translateY(-50%);
+      text-align: center;
     }
     h1 {
       font-size: 130px;
@@ -51,6 +53,27 @@
       background: linear-gradient(0deg, rgb(24, 170, 255) 0%, rgba(2, 126, 251, 1) 100%);
       box-shadow: #00c3ff 0px 0 25px;
     }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .footer a {
+      color: rgba(194, 241, 255, 0.7);
+      text-decoration: dotted;
+    }
+    .footer a:hover {
+      color: rgba(0, 195, 255, 0.7);
+    }
+    .discord-icon {
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -60,6 +83,7 @@
     <h2>Oops! The page you're looking for doesn't exist.</h2>
     <a href="/" class="button">Go Back Home</a>
   </div>
+
   <div class="footer">
     <p>Made by Shalllonz and <a href="https://alper.boo">AlperSocial</a> with ❤️</p>
     <p style="margin-top: -0.8%; color: #919191;">(We are not actually affiliated with WeAreDevs or JJSploit.)</p>
