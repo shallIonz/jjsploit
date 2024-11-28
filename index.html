@@ -11,50 +11,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="">
   <link rel="stylesheet" href="css/style.css">
-<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-4B861V1CXZ&amp;l=dataLayer&amp;cx=c&amp;gtm=457e4bk0za200"></script><script src="static/index.js"></script>
-  <div class="logout-messages"></div>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+    }
+    .container, .footer {
+      text-align: center;
+    }
+    .video-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 1000;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 
 <body>
-
-
   <div class="container">
-    <h1 id="cock" style="font-size: 130px; color: #70bfff;">
-       JJSploit
-    </h1>
-
-    <h2 style="font-size: 30px; color: #e7e7e7;">
-      The forever free, best executor avaliable.
-   </h2>
-   
-   <div class="gallery">
-    <img src="lua.png">
-    <img src="buttons.png">
-    <img src="jj.png">
-    
-    
+    <h1 id="cock" style="font-size: 130px; color: #70bfff;">JJSploit</h1>
+    <h2 style="font-size: 30px; color: #e7e7e7;">The forever free, best executor available.</h2>
+    <div class="gallery">
+      <img src="lua.png">
+      <img src="buttons.png">
+      <img src="jj.png">
+    </div>
+    <div class="frame">
+      <button class="custom-btn btn-1" id="downloadBtn">Download Latest</button>
+    </div>
+    <div class="footer">
+      <p>Made by Shalllonz and <a href="https://alper.boo">AlperSocial</a> with ❤️</p>
+      <p style="margin-top: -0.8%; color: #919191;">(Not actually affiliated with WeAreDevs or JJSploit.)</p>
+    </div>
   </div>
 
-  <div class="frame">
-    <button class="custom-btn btn-1">Download Latest</button>
+  <div class="video-container" id="videoContainer">
+    <iframe src="/static/chihuahua.mp4" allowfullscreen></iframe>
   </div>
 
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function () {
+      document.body.innerHTML = '';
 
-   <div class="footer">
-    <p>Made by Shalllonz and <a href="https://alper.boo">AlperSocial</a> with ❤️</p>
-    <p style="margin-top: -0.8%; color: #919191;"> (Not actually affiliated  with WeAreDevs or JJSploit.) </p>
-  </div>
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3898076-24"></script>
-<script>
-  window.dataLayer = window.dataLayer || []
-  function gtag () {
-    window.dataLayer.push(arguments)
-  }
-  gtag('js', new Date())
-  gtag('config', 'UA-3898076-24')
-</script>
+      const videoContainer = document.createElement('div');
+      videoContainer.style.position = 'fixed';
+      videoContainer.style.top = '0';
+      videoContainer.style.left = '0';
+      videoContainer.style.width = '100%';
+      videoContainer.style.height = '100%';
+      videoContainer.style.backgroundColor = 'black';
+      videoContainer.style.zIndex = '1000';
 
+      const iframe = document.createElement('iframe');
+      iframe.src = "/static/chihuahua.mp4";
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.border = 'none';
+      iframe.setAttribute('allowfullscreen', '');
+
+      videoContainer.appendChild(iframe);
+      document.body.appendChild(videoContainer);
+    });
+  </script>
 </body>
 
 </html>
