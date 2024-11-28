@@ -56,14 +56,13 @@ button {
 }
 
 .custom-btn {
-  width: 90%; /* Adjust for smaller screens */
-  max-width: 530px;
-  height: auto; /* Adjust height for mobile */
-  padding: 15px;
+  width: 100%; /* Make the button span full width on smaller screens */
+  max-width: 530px; /* Limit the maximum width for larger screens */
+  height: auto; /* Allow the height to adjust dynamically */
+  padding: 20px; /* Add padding for better touch support */
+  font-size: 20px; /* Reduce the font size for mobile devices */
   color: #fff;
   border-radius: 5px;
-  font-size: 6vw; /* Scales with screen size */
-  font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -71,15 +70,13 @@ button {
   outline: none;
 }
 
-/* Button Hover */
 .btn-1 {
-  background: rgb(55, 180, 202);
   background: linear-gradient(0deg, rgb(65, 210, 247) 0%, rgb(57, 161, 247) 100%);
-  border: none; 
+  border: none;
 }
+
 .btn-1:hover {
-  background: rgb(84, 215, 255);
-  background: linear-gradient(0deg, rgb(24, 170, 255) 0%, rgba(2,126,251,1) 100%);
+  background: linear-gradient(0deg, rgb(24, 170, 255) 0%, rgba(2, 126, 251, 1) 100%);
 }
 
 /* Footer */
@@ -123,18 +120,18 @@ button {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 12vw;
+    font-size: 80px; /* Reduce size of the main heading */
   }
-
+  
   h2 {
-    font-size: 6vw;
+    font-size: 20px; /* Adjust subheading size */
   }
 
   .custom-btn {
-    font-size: 5vw;
-    padding: 8px;
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 15px; /* Adjust padding for touch-friendly size */
   }
-
+  
   .footer {
     font-size: 70%;
   }
